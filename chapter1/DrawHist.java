@@ -6,9 +6,11 @@ package chapter1;
   DATE: 2017/9/23
   TIME: 13:30
 
-  1.1.31 直方图
-  //TODO
-  
+  1.1.32 直方图
+  假设标准输人流中含有一系列 double 值。
+  从命令行接受一个整数和两个浮点数 l 和 h。将 (l,r) 分为 N 段。
+  并使用 StdDraw 画出输人流中的值落人每段的数量的直方图。
+
  */
 
 import edu.princeton.cs.algs4.StdDraw;
