@@ -19,6 +19,7 @@ package chapter1;
   % java Average < tinyW.txt
 
   % java RandomSeq 1000 100.0 200.0 | java Average
+  150.49255
 
  */
 
@@ -29,7 +30,6 @@ import edu.princeton.cs.algs4.StdOut;
 class Average {
 
     public static void main(String[] args) {
-        StdOut.println("please input: ");
         double sum = 0.0;
         int cnt = 0;
 
@@ -40,6 +40,5 @@ class Average {
 
         double avg = sum / cnt;
         StdOut.printf("Average is %.5f\n", avg);
-        System.out.println("可以和 RandomSeq 配合使用。");
     }
 }

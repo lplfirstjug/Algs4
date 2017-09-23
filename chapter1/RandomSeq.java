@@ -18,7 +18,7 @@ package chapter1;
   104.02
 
   % java RandomSeq 1000 100.0 200.0 | java Average
-
+  150.49255
 
  */
 
@@ -42,8 +42,7 @@ public class RandomSeq {
             RandomSeq.randomSeq(N, lo, hi);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(
-                    "需要输入三个参数，随机数个数（整型），下限（浮点型），上限 （浮点型）。\n" +
-                            "可以和 Average 配合使用。");
+                    "需要输入三个参数，随机数个数（整型），下限（浮点型），上限 （浮点型）。\n" + "可以和 Average 配合使用。");
         }
     }
 }
