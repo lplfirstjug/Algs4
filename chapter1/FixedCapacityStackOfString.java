@@ -17,7 +17,7 @@ package chapter1;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-public class FixedCapacityStackOfString implements StackTest.Stack {
+public class FixedCapacityStackOfString implements FixedCapacityStackTest.FixedStack {
 
     private String[] a;
     private int N;

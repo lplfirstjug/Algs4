@@ -21,8 +21,7 @@ package chapter1;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class FixedCapacityStack<Item> implements StackTest.Stack {
-
+public class FixedCapacityStack<Item> implements FixedCapacityStackTest.FixedStack {
     private Item[] a;
     private int N;
 
@@ -32,8 +31,7 @@ public class FixedCapacityStack<Item> implements StackTest.Stack {
     }
 
     public static void main(String[] args) {
-        FixedCapacityStack<String> s;
-        s = new FixedCapacityStack<String>(100);
+        FixedCapacityStack<String> s = new FixedCapacityStack<>(100);
         String[] str = {"to", "be", "or", "not", "to", "-", "be", "-", "-", "that", "-", "-", "-", "is"};
 
         for (String item : str) {
@@ -43,7 +41,7 @@ public class FixedCapacityStack<Item> implements StackTest.Stack {
                 StdOut.print(s.pop() + " ");
             }
         }
-        StdOut.println("\n" + s.size() + " left on stack");
+        StdOut.println("\n" + s.size() + " left on stack.");
     }
 
     public boolean isEmpty() {

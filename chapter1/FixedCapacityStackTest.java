@@ -10,12 +10,11 @@ package chapter1;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class StackTest {
+public class FixedCapacityStackTest {
 
-    public static void stack_test(Stack st) {
+    public static void stack_test(FixedStack st) {
         String[] str = {"to", "be", "or", "not", "to", "-", "be", "-", "-", "that", "-", "-", "-", "is"};
-        for (int i = 0; i < str.length; i++) {
-            String s = str[i];
+        for (String s : str) {
             if (!s.equals("-")) {
                 st.push(s);
             } else {
@@ -26,8 +25,8 @@ public class StackTest {
     }
 
     public static void main(String[] args) {
-        Stack s_of_s = new FixedCapacityStackOfString(100);
-        Stack<String> s_all = new FixedCapacityStack<String>(100);
+        FixedStack s_of_s = new FixedCapacityStackOfString(100);
+        FixedStack<String> s_all = new FixedCapacityStack<String>(100);
 
         stack_test(s_of_s);
         stack_test(s_all);
@@ -48,7 +47,7 @@ public class StackTest {
     }
     */
 
-    public interface Stack<Item> {
+    public interface FixedStack<Item> {
         void push(Item s);
 
         Item pop();
