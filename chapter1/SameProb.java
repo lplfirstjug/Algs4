@@ -44,6 +44,7 @@ public class SameProb {
 
     public static void main(String[] args) {
         int[] Ns = {1000, 10000, 100000, 1000000};
+        //TODO: 计算每次实验的平均值
         try {
             int T = Integer.parseInt(args[0]);
 

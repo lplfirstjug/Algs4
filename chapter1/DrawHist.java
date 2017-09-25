@@ -60,6 +60,7 @@ public class DrawHist {
 
 
     public static void main(String[] args) {
+        //TODO:命令行输入
         int N = 100;
         double lo = 5.0;
         double hi = 10.0;
