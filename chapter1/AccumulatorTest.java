@@ -8,6 +8,12 @@ import edu.princeton.cs.algs4.StdRandom;
  USER: wang hai
  DATE: 2017/9/22
  TIME: 15:58
+
+ Accumulator 类的用例
+    统计随机数
+ VisualAccumulator 类的用例
+    统计随机数并可视化
+
  */
 
 public class AccumulatorTest {

@@ -5,6 +5,14 @@ package chapter1;
   USER: wang hai
   DATE: 2017/9/22
   TIME: 15:49
+
+  VisualAccumulator类  可视化累加器
+                    VisualAccumulator()     创建一个累加器
+            void    addDataValue(double)    添加一个新的数据值
+          double    mean()                  所有数据的平均值
+          String    toString()              对象的字符串表示
+  * 该实现不保存数据的值
+
  */
 
 import edu.princeton.cs.algs4.StdDraw;

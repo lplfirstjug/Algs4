@@ -7,9 +7,10 @@ package chapter1;
   TIME: 15:14
   
   Counter类 计数器
-      void  increment() 计数器自增 1
-       int  tally()     计数器创建后被加 1 的次数
-    String  toString()  对象的字符串表示
+            Counter(String)     创建一个计数器
+      void  increment()         计数器自增 1
+       int  tally()             计数器创建后被加 1 的次数
+    String  toString()          对象的字符串表示
  */
 
 public class Counter {
