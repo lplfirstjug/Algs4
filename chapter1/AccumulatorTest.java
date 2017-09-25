@@ -26,16 +26,7 @@ public class AccumulatorTest {
         StdOut.println(a);
     }
 
-    private static void test_visual_accumulator(int T) {
-        VisualAccumulator va = new VisualAccumulator(T, 1.0);
-        for (int i = 0; i < T; i++) {
-            va.addDataValue(StdRandom.uniform());
-        }
-        System.out.println(va);
-    }
-
     public static void main(String[] args) {
         test_accumulator(1000);
-        test_visual_accumulator(1000);
     }
 }
