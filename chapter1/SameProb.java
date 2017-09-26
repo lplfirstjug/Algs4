@@ -42,25 +42,26 @@ public class SameProb {
         return cnt;
     }
 
-    public static void main(String[] args) {
+
+    private static double averageProb(int N, int T) {
+        double prob = 0.0;
+        for (int i = 0; i < T; i++) {
+            prob += cnt_same(N, 2 * N);
+        }
+        return prob / T;
+    }
+
+    private static void showProb(int T) {
         int[] Ns = {1000, 10000, 100000, 1000000};
-        //TODO: 计算每次实验的平均值
+        for (int N : Ns) {
+            StdOut.printf("%-9d %-9.2f\n", N, averageProb(N, T));
+        }
+    }
+
+    public static void main(String[] args) {
         try {
             int T = Integer.parseInt(args[0]);
-
-            StdOut.printf("%9s", "");
-            for (int i = 1; i < T + 1; i++) {
-                StdOut.printf("%-9d", i);
-            }
-            StdOut.println();
-
-            for (int N : Ns) {
-                StdOut.printf("%-9d", N);
-                for (int i = 0; i < T; i++) {
-                    StdOut.printf("%-9d", SameProb.cnt_same(N, N * 2));
-                }
-                StdOut.println();
-            }
+            showProb(T);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("需要输入一个参数，实验次数（整型）。");
         }
