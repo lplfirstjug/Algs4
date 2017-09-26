@@ -3,8 +3,8 @@ package chapter1;
 /*
   PACKAGE: chapter1
   USER: wang hai
-  DATE: 2017/9/25
-  TIME: 15:09
+  DATE: 2017/9/26
+  TIME: 15:20
   
   
  */
@@ -13,21 +13,34 @@ import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Iterator;
 
-public class Stack<Item> implements Iterable<Item> {
+public class Bag<Item> implements Iterable<Item> {
 
     private Node first;
     private int N;
+
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        int[] ns = {10, 20, 30, 40, 50};
+        Bag<Double> numbers = new Bag<>();
+        double[] ns = {100, 99, 101, 120, 98, 107, 109, 81, 101, 90};
 
-        for (int n : ns) {
-            stack.push(n);
+        for (double n : ns) {
+            numbers.add(n);
         }
+        int N = numbers.size();
 
-        for (int i : stack) {
-            StdOut.print(i + " ");
+        double sum = 0.0;
+        for (double x : numbers) {
+            sum += x;
         }
+        double mean = sum / N;
+
+        sum = 0.0;
+        for (double x : numbers) {
+            sum += (x - mean) * (x - mean);
+        }
+        double std = Math.sqrt(sum / (N - 1));
+
+        StdOut.printf("Mean: %.2f\n", mean);
+        StdOut.printf("Std dev: %.2f\n", std);
     }
 
     public boolean isEmpty() {
@@ -38,19 +51,12 @@ public class Stack<Item> implements Iterable<Item> {
         return N;
     }
 
-    public void push(Item item) {
+    public void add(Item item) {
         Node old_first = first;
         first = new Node();
         first.item = item;
         first.next = old_first;
         N++;
-    }
-
-    public Item pop() {
-        Item item = first.item;
-        first = first.next;
-        N--;
-        return item;
     }
 
     @Override
@@ -83,4 +89,5 @@ public class Stack<Item> implements Iterable<Item> {
             return item;
         }
     }
+
 }
