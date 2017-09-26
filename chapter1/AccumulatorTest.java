@@ -11,8 +11,6 @@ import edu.princeton.cs.algs4.StdRandom;
 
  Accumulator 类的用例
     统计随机数
- VisualAccumulator 类的用例
-    统计随机数并可视化
 
  */
 

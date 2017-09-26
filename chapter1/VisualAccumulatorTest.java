@@ -6,6 +6,9 @@ package chapter1;
   DATE: 2017/9/25
   TIME: 22:13
 
+  VisualAccumulator 类的用例
+    统计随机数并可视化
+
  */
 
 import edu.princeton.cs.algs4.StdRandom;

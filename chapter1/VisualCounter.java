@@ -52,6 +52,6 @@ public class VisualCounter {
 
     @Override
     public String toString() {
-        return "Count: " + count;
+        return "Count: " + tally();
     }
 }
