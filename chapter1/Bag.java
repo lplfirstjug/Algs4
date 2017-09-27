@@ -5,8 +5,14 @@ package chapter1;
   USER: wang hai
   DATE: 2017/9/26
   TIME: 15:20
-  
-  
+
+  Bag 类 背包
+    public class Bag<Item> implements Iterable<Item>
+                Bag()       创建一个空背包
+        void    add(Item)   添加一个元素
+     boolean    isEmpty()   背包中的元素是否为空
+         int    size()      背包中元素的数量
+
  */
 
 import edu.princeton.cs.algs4.StdOut;
@@ -18,6 +24,7 @@ public class Bag<Item> implements Iterable<Item> {
     private Node first;
     private int N;
 
+    // 背包的用例
     public static void main(String[] args) {
         Bag<Double> numbers = new Bag<>();
         double[] ns = {100, 99, 101, 120, 98, 107, 109, 81, 101, 90};
@@ -89,5 +96,4 @@ public class Bag<Item> implements Iterable<Item> {
             return item;
         }
     }
-
 }

@@ -15,10 +15,6 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     private Item[] a = (Item[]) new Object[1];
     private int N = 0;
 
-    public static void main(String[] args) {
-
-    }
-
     public boolean isEmpty() {
         return N == 0;
     }

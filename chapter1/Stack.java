@@ -5,7 +5,14 @@ package chapter1;
   USER: wang hai
   DATE: 2017/9/25
   TIME: 15:09
-  
+
+  Stack 类 后进先出队列，下压栈
+    public class Stack<Item> implements Iterable<Item>
+                Stack()         创建一个空栈
+        void    push(Item)  添加一个元素
+        Item    pop()       删除最近添加的元素
+     boolean    isEmpty()   栈中的元素是否为空
+         int    size()      栈中元素的数量
   
  */
 
@@ -17,6 +24,15 @@ public class Stack<Item> implements Iterable<Item> {
 
     private Node first;
     private int N;
+
+    private static Stack<String> copy(Stack<String> stack) {
+        Stack<String> res = new Stack<>();
+        for (String s : stack) {
+            res.push(s);
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
         int[] ns = {10, 20, 30, 40, 50};

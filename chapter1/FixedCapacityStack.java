@@ -53,7 +53,7 @@ public class FixedCapacityStack<Item> implements FixedCapacityStackTest.FixedSta
     }
 
     public void push(Object item) {
-        a[N] = (Item) item;
+        a[N] = (Item) item; // 泛型数组
         N++;
     }
 
