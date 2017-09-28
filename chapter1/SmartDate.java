@@ -16,10 +16,6 @@ public class SmartDate {
     private final int day;
     private final int year;
 
-    private final int DAYS_YEAR = 365;
-    private final int DAYS_WEEK = 7;
-    private final int WEEKS_FOR_START = 6; // 2000/01/01 -> Sunday
-
     private final String[] WEEKS = {"Monday", "Tuesday", "Wednesday", "Thursday", "Firday", "Saturday", "Sunday"};
     private int[] DAYS_IN_MONTH = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -75,6 +71,7 @@ public class SmartDate {
 
     private int days_to_year() {
         int y = year - 2000;
+        int DAYS_YEAR = 365;
         return y * DAYS_YEAR + y / 4 - (y - 1) / 100 + (y - 1) / 400;
     }
 
@@ -92,8 +89,10 @@ public class SmartDate {
     }
 
     public String dayOfTheWeek() {
+        int WEEKS_FOR_START = 6;
         int wk = (days_to_data() + WEEKS_FOR_START) % 7;
         if (wk < 0) {
+            int DAYS_WEEK = 7;
             wk += DAYS_WEEK;
         }
         return WEEKS[wk];

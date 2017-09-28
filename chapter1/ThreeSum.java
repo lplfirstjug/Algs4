@@ -7,7 +7,7 @@ package chapter1;
   TIME: 10:47
 
   1.4.2.1
-  统计输入流中所有和为0整数三元组的数目
+  统计输入流中所有和为 0 整数三元组的数目
   
  */
 
@@ -37,6 +37,6 @@ public class ThreeSum {
 
         Stopwatch timer = new Stopwatch();
         int count = count(a);
-        StdOut.println(count + "triples  " + timer.elapsedTime() + " seconds");
+        StdOut.println(count + " triples  " + timer.elapsedTime() + " seconds");
     }
 }
