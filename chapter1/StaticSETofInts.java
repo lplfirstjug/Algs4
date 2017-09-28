@@ -3,10 +3,13 @@ package chapter1;
 import java.util.Arrays;
 
 /*
- PACKAGE: chapter1
- USER: wang hai
- DATE: 2017/9/23
- TIME: 09:16
+  PACKAGE: chapter1
+  USER: wang hai
+  DATE: 2017/9/23
+  TIME: 09:16
+
+  
+
  */
 
 public class StaticSETofInts {
