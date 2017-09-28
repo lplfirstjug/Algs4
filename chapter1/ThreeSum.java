@@ -5,7 +5,9 @@ package chapter1;
   USER: wang hai
   DATE: 2017/9/26
   TIME: 10:47
-  
+
+  1.4.2.1
+  统计输入流中所有和为0整数三元组的数目
   
  */
 
