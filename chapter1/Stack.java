@@ -27,21 +27,40 @@ public class Stack<Item> implements Iterable<Item> {
 
     private static Stack<String> copy(Stack<String> stack) {
         Stack<String> res = new Stack<>();
-        for (String s : stack) {
-            res.push(s);
+        int N = stack.size();
+        String[] tmp = new String[N];
+
+        // 出现倒序！！！
+        for (int i = 0; i < N; i++) {
+            tmp[i] = stack.pop();
+            res.push(tmp[i]);
+        }
+        for (int i = 0; i < N; i++) {
+            stack.push(tmp[i]);
         }
         return res;
     }
 
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        int[] ns = {10, 20, 30, 40, 50};
+        Stack<String> s = new Stack<>();
+        String[] ns = {"10", "20", "30", "40", "50"};
 
-        for (int n : ns) {
-            stack.push(n);
+        for (String n : ns) {
+            s.push(n);
         }
 
-        for (int i : stack) {
+        for (String n : ns) {
+            StdOut.print(n + " ");
+        }
+        StdOut.println();
+
+        Stack<String> s2 = copy(s);
+
+        for (String i : s) {
+            StdOut.print(i + " ");
+        }
+        StdOut.println();
+        for (String i : s2) {
             StdOut.print(i + " ");
         }
     }
