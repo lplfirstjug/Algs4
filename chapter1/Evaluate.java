@@ -18,7 +18,6 @@ public class Evaluate {
         for (String s : strs) {
             switch (s) {
                 case "(":
-                    ;
                     break;
                 case "+":
                 case "-":
@@ -63,16 +62,20 @@ public class Evaluate {
     }
     */
 
+    private static void infix_to_postfix(String[] strs) {
+
+    }
+
     private static void left_bracket(String[] strs) {
-        Stack<String> in = new Stack<>();
+        Stack<String> out = new Stack<>();
         // String[] sub_out = new String[4];
 
         for (String s : strs) {
-            in.push(s);
+            out.push(s);
             if (s.equals(")")) {
                 /*
                 for (int i = 3; i >= 0; i--) {
-                    sub_out[i]=in.pop();
+                    sub_out[i]=out.pop();
                 }
                 String tmp="";
                 for (int i = 0; i < 4; i++) {
@@ -81,13 +84,12 @@ public class Evaluate {
                 */
                 String tmp = "";
                 for (int i = 0; i < 4; i++) {
-                    tmp = in.pop() + tmp;
+                    tmp = out.pop() + tmp;
                 }
-                in.push("(" + tmp);
+                out.push("(" + tmp);
             }
         }
-
-        StdOut.println(in.pop());
+        StdOut.println(out.pop());
     }
 
     public static void main(String[] args) {

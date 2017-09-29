@@ -13,7 +13,7 @@ package chapter1;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
-public class DoubligTest {
+public class DoublingTest {
 
     private static double timeTrial(int N) {
         int MAX = 1000000;
@@ -22,7 +22,7 @@ public class DoubligTest {
             a[i] = StdRandom.uniform(-MAX, MAX);
         }
         Stopwatch timer = new Stopwatch();
-        int cnt = ThreeSum.count(a);
+        int __ = ThreeSum.count(a);
         return timer.elapsedTime();
     }
 

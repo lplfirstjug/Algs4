@@ -18,7 +18,7 @@ public class Parentheses {
         String rgt_bracket = ")]}";
         for (int i = 0; i < brackets.length(); i++) {
             char tmp = brackets.charAt(i);
-            if (tmp == '(' || tmp == '[' || tmp == '{') {
+            if (lft_bracket.indexOf(tmp) >= 0) {
                 s.push(tmp);
             } else {
                 char lft_tmp = s.pop();
@@ -39,5 +39,6 @@ public class Parentheses {
     public static void main(String[] args) {
         StdOut.println(parentheses("[()]{}{[()()]()}"));
         StdOut.println(parentheses("[(])"));
+//        StdOut.println("df".indexOf('a'));
     }
 }

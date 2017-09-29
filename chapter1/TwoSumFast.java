@@ -44,7 +44,7 @@ public class TwoSumFast {
             else {
                 cnt++;
                 i++;
-                // 对数计算
+                // 重复数字
                 if (a[i - 1] != a[i]) j--;
             }
         }
