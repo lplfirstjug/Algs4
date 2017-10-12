@@ -8,7 +8,11 @@ package chapter1;
 
  */
 
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Iterator;
+
 
 public class ResizingArrayStack<Item> implements Iterable<Item> {
 
@@ -67,6 +71,35 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
         }
 
         public void remove() {
+        }
+    }
+
+    private static double time_test(int N,int T){
+        Stopwatch tm = new Stopwatch();
+        ResizingArrayStack<Integer> rs = new ResizingArrayStack<>();
+        for (int i = 0; i < T; i++) {
+            for (int j = 0; j < N ; j++){
+                rs.push(j);
+            }
+        }
+        return tm.elapsedTime();
+    }
+
+    private static void show_time(int L){
+        StdDraw.setXscale(0,L);
+        StdDraw.setYscale(0,0.15);
+        StdDraw.setPenRadius(.005);
+        StdDraw.setPenColor(StdDraw.BOOK_RED);
+
+        for (int i = 1; i <= L ; i++) {
+            StdDraw.point(i,time_test(i,100000));
+        }
+    }
+
+    public static void main(String[] args){
+        VisualAccumulator va = new VisualAccumulator(200,0.5);
+        for (int i = 1; i <= 200 ; i++) {
+            va.addDataValue(time_test(i,100000));
         }
     }
 }

@@ -32,6 +32,24 @@ public class ThreeSumFast {
         return cnt;
     }
 
+    private static int count_fast(int[] a){
+        int l = a.length-1;
+        int cnt = 0;
+        for (int i = 0; i < a.length-2; i++) {
+            int f = i+1;
+            while (f!=l){
+                if (a[i]+a[f]+a[l]>0) l--;
+                else if (a[i]+a[f]+a[l]<0) f++;
+                else{
+                    cnt++;
+                    f++;
+                    l--;
+                }
+            }
+        }
+        return cnt;
+    }
+
     public static void main(String[] args) {
         In in = new In(args[0]);
         int[] a = in.readAllInts();
